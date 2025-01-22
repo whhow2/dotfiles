@@ -39,7 +39,7 @@ if (empty($TMUX))
   endif
 endif
 
-set background=dark
+set background=light
 let g:ayucolor="mirage"
 colorscheme ayu
 
