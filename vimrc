@@ -12,8 +12,8 @@ Plug 'dense-analysis/ale'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'rhysd/vim-lsp-ale'
-" Plug 'prabirshrestha/asyncomplete.vim'
-" Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-floaterm'
@@ -23,7 +23,7 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 """ CORE SETTINGS """
-syntax off
+syntax on
 
 """ COLORSCHEME """
 if (empty($TMUX))
@@ -42,6 +42,9 @@ endif
 set background=light
 let g:ayucolor="mirage"
 colorscheme ayu
+set fillchars+=stl:\ ,stlnc:\
+highlight StatusLine   cterm=none ctermfg=white ctermbg=black guibg=red
+highlight StatusLineNC cterm=none ctermfg=white ctermbg=black guibg=green
 
 """ TRANSPARENCY
 " hi Normal guibg=NONE ctermbg=NONE
@@ -94,7 +97,7 @@ if (!has("nvim"))
 endif
 
 "clipboard setting
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 "searching
 set ignorecase
@@ -182,7 +185,7 @@ let g:ale_lint_on_text_changed = 'never'
 
 """ TERMINAL """
 """ FLOATERM """
-nnoremap <C-/> :FloatermToggle!<CR>
+nnoremap <C-/> :FloatermToggle<CR>
 tnoremap <C-/> <C-\><C-n>:FloatermToggle<CR>
 
 """ FILES AND SEARCHING """

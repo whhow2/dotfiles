@@ -5,11 +5,12 @@ clear
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/emacs:$HOME/.emacs.d/bin:$HOME/.dotnet:$HOME/.dotnet/tools:$PATH:$HOME/.pyenv/bin
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.local/share/applications:$HOME/.cargo/bin:$HOME/.config/emacs:$HOME/.emacs.d/bin:$HOME/.dotnet:$HOME/.dotnet/tools:$PATH:$HOME/.pyenv/bin
+export PATH="$PATH:/opt/nvim-linux64/bin"
 # export DOTNET_ROOT=$HOME/.dotnet/
 export DOTNET_ROOT=/usr/local/share/dotnet/
 
-neofetch
+# neofetch
 
 export PYTHONPATH=/usr/bin/python3
 if [ -f ~/Library/Python/3.11/bin ]; then
@@ -142,6 +143,9 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
+#xterm settings
+TERM=xterm-kitty
+
 #default to neovim
 #alias vim="nvim"
 alias vi="vim"
@@ -185,7 +189,7 @@ alias vi3="vi ~/.config/i3/config"
 alias vipbar="vi ~/.config/polybar/config.ini"
 
 #change to obsididian directory
-alias cdobs="cd ~/Documents/obsidian-main-vault"
+alias cdobs="cd ~/Documents/obsidian-vault"
 
 ## change to dotfiles directory
 alias cddot='cd ~/dotfiles'
