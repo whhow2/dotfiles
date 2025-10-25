@@ -7,6 +7,8 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/.local/share/applications:$HOME/.cargo/bin:$HOME/.config/emacs:$HOME/.emacs.d/bin:$HOME/.dotnet:$HOME/.dotnet/tools:$PATH:$HOME/.pyenv/bin
 export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:$HOME/Qt/6.2.4/macos/bin"
+export PATH="$PATH:/usr/local/opt/tcl-tk/bin"
 # export DOTNET_ROOT=$HOME/.dotnet/
 export DOTNET_ROOT=/usr/local/share/dotnet/
 
@@ -32,9 +34,9 @@ export PYENV_VIRTUALWRAPPER_PREFER_PYENV="true"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -135,7 +137,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -144,12 +146,18 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 
 #xterm settings
-TERM=xterm-kitty
+#TERM=xterm-kitty
+export TERM=xterm-256color
 
 #default to neovim
-#alias vim="nvim"
-alias vi="vim"
+# alias vim="nvim"
+# alias vi="vim"
+alias vi="nvim"
 #alias oldvim="\vim"
+
+#set editor
+# export EDITOR=nvim
+# export VISUAL=nvim
 
 #wxWidgets
 export WX_CONFIG=/usr/local/x86_64/bin/wx-config
@@ -159,13 +167,16 @@ export WX_CONFIG=/usr/local/x86_64/bin/wx-config
 alias general="tmux new-session -A -s main"
 
 ##development tmux session
-alias dev="tmux new-session -A -s dev"
+alias devmux="tmux new-session -A -s dev"
 
 #browser-sync
 alias serve='browser-sync start --directory --server --files "*.js, *.html, *.css"'
 
 # edit vim config
 alias vivim="vi ~/dotfiles/vimrc"
+
+#edit nvim
+alias vinvim="vi ~/.config/nvim/init.vim"
 
 # cd to vimconfig
 alias cdvim="cd ~/vimfiles"
@@ -187,6 +198,9 @@ alias vi3="vi ~/.config/i3/config"
 
 #open polybar
 alias vipbar="vi ~/.config/polybar/config.ini"
+
+#open wezterm config
+alias viwez="vi ~/.wezterm.lua"
 
 #change to obsididian directory
 alias cdobs="cd ~/Documents/obsidian-vault"
@@ -231,3 +245,4 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
