@@ -27,7 +27,7 @@ if has('nvim')
   Plug 'nvim-telescope/telescope-file-browser.nvim'
   Plug 'nvim-telescope/telescope-project.nvim'
   Plug 'nvim-telescope/telescope-media-files.nvim'
-  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
+  "Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
   Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'mhinz/vim-startify'
@@ -59,7 +59,7 @@ require("telescope").setup({
     },
   },
 })
-require('telescope').load_extension('fzf')
+-- require('telescope').load_extension('fzf')
 require('telescope').load_extension('media_files')
 require("telescope").load_extension('file_browser')
 require('telescope').load_extension('project')
