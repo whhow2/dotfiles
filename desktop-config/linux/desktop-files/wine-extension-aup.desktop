@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Audacity - Video Viewer
-MimeType=application/x-wine-extension-aup;
-Exec=env WINEPREFIX="/home/will/.wine" wine start /ProgIDOpen Audacity\\ -\\ Video\\ Viewer\\ project %f
-NoDisplay=true
-StartupNotify=true
-Icon=79FA_Audacity - Video Viewer.0
