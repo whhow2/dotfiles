@@ -20,15 +20,15 @@ config.font = wezterm.font("BitstromWera Nerd Font Mono")
 -- config.color_scheme = 'Alabaster'
 -- config.color_scheme = 'Github'
 -- config.color_scheme = 'AtomOneLight'
--- config.color_scheme = 'iceberg-light'
-config.color_scheme = 'iceberg'
+config.color_scheme = 'iceberg-light'
+-- config.color_scheme = 'iceberg'
 -- config.color_scheme = "Atom"
 -- config.color_scheme = 'Tokyo Night'
 -- config.color_scheme = 'Everforest Light (Gogh)'
 -- config.color_scheme = 'Catppuccin Latte'
 -- config.color_scheme = 'Ayu Light (Gogh)'
 
-config.window_background_opacity = 0.85
+-- config.window_background_opacity = 0.85
 local act = wezterm.action
 
 -- 36 is the default, but you can choose a different size.

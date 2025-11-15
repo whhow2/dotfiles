@@ -10,6 +10,7 @@ if has('nvim')
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'nvim-tree/nvim-web-devicons'
   Plug 'cocopon/iceberg.vim'
+  Plug 'projekt0n/github-nvim-theme'
   Plug 'dense-analysis/ale'
   Plug 'prabirshrestha/vim-lsp'
   Plug 'mattn/vim-lsp-settings'
@@ -27,15 +28,14 @@ if has('nvim')
   Plug 'nvim-telescope/telescope-file-browser.nvim'
   Plug 'nvim-telescope/telescope-project.nvim'
   Plug 'nvim-telescope/telescope-media-files.nvim'
-  "Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
   Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
   Plug 'lewis6991/gitsigns.nvim'
   Plug 'mhinz/vim-startify'
   call plug#end()
-  set background=dark
-  let g:tokyonight_style = 'night' " available: night, storm
-  let g:tokyonight_enable_italic = 1
-  colorscheme iceberg
+  "set background=dark
+  set background=light
+  "colorscheme iceberg
+  colorscheme github_light
   lua << END
 require('lualine').setup()
 require("telescope").setup({
