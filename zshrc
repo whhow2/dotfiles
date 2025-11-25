@@ -151,8 +151,8 @@ export TERM=xterm-256color
 
 #default to neovim
 # alias vim="nvim"
-# alias vi="vim"
-alias vi="nvim"
+alias vi="vim"
+# alias vi="nvim"
 #alias oldvim="\vim"
 
 #set editor
