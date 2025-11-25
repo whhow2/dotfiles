@@ -75,7 +75,6 @@ nnoremap <Leader>fp :Telescope project<cr>
 else
   call plug#begin()
   Plug 'bluz71/vim-mistfly-statusline'
-  " Plug 'itchyny/lightline.vim'
   Plug 'cocopon/iceberg.vim'
   Plug 'cormacrelf/vim-colors-github'
   Plug 'alligator/accent.vim'
@@ -396,14 +395,3 @@ nmap <Leader>dj <Plug>VimspectorStepOver
 
 """ FORMATTING """
 autocmd BufWritePost *.py silent !black %
-
-""" Lightline """
-let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
