@@ -4,80 +4,11 @@ let mapleader=" "
 
 set termguicolors
 
-""" neovim specific """
-if has('nvim')
-  call plug#begin()
-  Plug 'nvim-lualine/lualine.nvim'
-  Plug 'nvim-tree/nvim-web-devicons'
-  Plug 'cocopon/iceberg.vim'
-  Plug 'projekt0n/github-nvim-theme'
-  Plug 'dense-analysis/ale'
-  Plug 'prabirshrestha/vim-lsp'
-  Plug 'mattn/vim-lsp-settings'
-  Plug 'rhysd/vim-lsp-ale'
-  Plug 'prabirshrestha/asyncomplete.vim'
-  Plug 'prabirshrestha/asyncomplete-lsp.vim'
-  Plug 'mattn/emmet-vim'
-  Plug 'tpope/vim-fugitive'
-  Plug 'puremourning/vimspector'
-  Plug 'tribela/transparent.nvim'
-  Plug 'Yggdroot/indentLine'
-  Plug 'nvim-lua/popup.nvim'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
-  Plug 'nvim-telescope/telescope-file-browser.nvim'
-  Plug 'nvim-telescope/telescope-project.nvim'
-  Plug 'nvim-telescope/telescope-media-files.nvim'
-  Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-  Plug 'lewis6991/gitsigns.nvim'
-  Plug 'mhinz/vim-startify'
-  call plug#end()
-  "set background=dark
-  set background=light
-  "colorscheme iceberg
-  colorscheme github_light
-  lua << END
-require('lualine').setup()
-require("telescope").setup({
-  extensions = {
-    file_browser = {
-      hijack_netrw = true,
-    },
-    media_files = {
-      -- filetypes whitelist
-      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-      filetypes = {"png", "webp", "jpg", "jpeg"},
-      -- find command (defaults to `fd`)
-      find_cmd = "rg"
-    },
-    fzf = {
-      fuzzy = true,                    -- false will only do exact matching
-      override_generic_sorter = true,  -- override the generic sorter
-      override_file_sorter = true,     -- override the file sorter
-      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-                                       -- the default case_mode is "smart_case"
-    },
-  },
-})
--- require('telescope').load_extension('fzf')
-require('telescope').load_extension('media_files')
-require("telescope").load_extension('file_browser')
-require('telescope').load_extension('project')
-require("toggleterm").setup({
-  open_mapping = [[<c-\>]],
-})
-END
-nnoremap <Leader><space> :Telescope find_files<cr>
-nnoremap <Leader>fg :Telescope live_grep<cr>
-nnoremap <Leader>fb :Telescope buffers<cr>
-nnoremap <Leader>fe :Telescope file_browser<cr>
-nnoremap <Leader>fp :Telescope project<cr>
-else
-  call plug#begin()
-  Plug 'bluz71/vim-mistfly-statusline'
-  Plug 'cocopon/iceberg.vim'
-  Plug 'cormacrelf/vim-colors-github'
-  Plug 'alligator/accent.vim'
+call plug#begin()
+  " Plug 'bluz71/vim-mistfly-statusline'
+  " Plug 'cormacrelf/vim-colors-github'
+  " Plug 'ghifarit53/tokyonight-vim'
+  " Plug 'rose-pine/vim'
   Plug 'tpope/vim-commentary'
   Plug 'dense-analysis/ale'
   Plug 'prabirshrestha/vim-lsp'
@@ -92,23 +23,24 @@ else
   Plug 'lambdalisue/vim-fern'
   Plug 'tribela/vim-transparent'
   Plug 'puremourning/vimspector'
+  Plug 'airblade/vim-gitgutter'
   Plug 'mhinz/vim-startify'
-  call plug#end()
-  set background=light
-  " colorscheme iceberg
-  colorscheme github
-  """ FZF """
-  set runtimepath^=~/.fzf
-  nnoremap <silent> <leader>fl :Lines<CR>
-  nnoremap <silent> <leader>ft :Rg<CR>
-  nnoremap <silent> <leader>fb :Buffers <CR>
-  nnoremap <silent> <leader>fg :GFiles <CR>
-  nnoremap <silent> <leader><space> :Files <CR>
-endif
+  " Plug 'voldikss/vim-floaterm'
+call plug#end()
+
+set background=dark
+colorscheme evening
+
+""" FZF """
+set runtimepath^=~/.fzf
+nnoremap <silent> <leader>fl :Lines<CR>
+nnoremap <silent> <leader>ft :Rg<CR>
+nnoremap <silent> <leader>fb :Buffers <CR>
+nnoremap <silent> <leader>fg :GFiles <CR>
+nnoremap <silent> <leader><space> :Files <CR>
 
 """ CORE SETTINGS """
 syntax on
-" syntax off
 " set re=0
 filetype plugin on
 
@@ -394,4 +326,7 @@ nmap <Leader>dl <Plug>VimspectorStepInto
 nmap <Leader>dj <Plug>VimspectorStepOver
 
 """ FORMATTING """
-autocmd BufWritePost *.py silent !black %
+ autocmd BufWritePost *.py silent !black %
+
+ """ INDENTLINE """
+ let g:indentLine_enabled = 0

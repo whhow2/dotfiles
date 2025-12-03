@@ -12,23 +12,12 @@ config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
 config.font_size = 14
--- config.font = wezterm.font 'CaskaydiaCove Nerd Font'
--- config.font = wezterm.font("FiraCode Nerd Font Mono")
--- config.font = wezterm.font("RobotoMono Nerd Font")
 config.font = wezterm.font("BitstreamVeraSansMono Nerd Font")
--- config.color_scheme = 'Adventure'
--- config.color_scheme = 'Alabaster'
--- config.color_scheme = 'Github'
--- config.color_scheme = 'AtomOneLight'
-config.color_scheme = 'iceberg-light'
--- config.color_scheme = 'iceberg'
+-- dark colorscheme
 -- config.color_scheme = "Atom"
--- config.color_scheme = 'Tokyo Night'
--- config.color_scheme = 'Everforest Light (Gogh)'
--- config.color_scheme = 'Catppuccin Latte'
--- config.color_scheme = 'Ayu Light (Gogh)'
+config.color_scheme = "Catppuccin Mocha"
 
--- config.window_background_opacity = 0.85
+config.window_background_opacity = 0.95
 local act = wezterm.action
 
 -- 36 is the default, but you can choose a different size.
