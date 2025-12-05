@@ -14,17 +14,20 @@ call plug#begin()
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
   Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'Yggdroot/indentLine'
   Plug 'lambdalisue/vim-fern'
   Plug 'tribela/vim-transparent'
+  Plug 'mattn/vimtweak'
+  Plug 'mattn/transparency-windows-vim'
   Plug 'puremourning/vimspector'
   Plug 'airblade/vim-gitgutter'
   Plug 'mhinz/vim-startify'
 call plug#end()
 
 set background=dark
-colorscheme evening
+colorscheme lunaperche
 
 """ FZF """
 set runtimepath^=~/.fzf
@@ -65,6 +68,7 @@ set backspace=indent,eol,start
 set nowrap
 
 """ CURSOR AND NUMBER SETTINGS """
+highlight Cursor ctermfg=NONE ctermbg=NONE gui=reverse
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
 set cursorline
