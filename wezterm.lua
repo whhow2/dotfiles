@@ -2,7 +2,8 @@
 local wezterm = require("wezterm")
 local mux = wezterm.mux
 
--- This will hold the configuration.
+
+local is_windows = wezterm.target_triple:find("windows") ~= nil-- This will hold the configuration.
 local config = wezterm.config_builder()
 
 wezterm.on('gui-startup', function(cmd)
@@ -43,7 +44,12 @@ config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
 config.font_size = 14
-config.font = wezterm.font("BitstromWera Nerd Font")
+if is_windows then
+  config.font = wezterm.font("BitstromWera Nerd Font")
+else
+  config.font = wezterm.font("BitstreamVeraSansMono Nerd Font Mono")
+end
+
 -- dark colorscheme
 -- config.color_scheme = "Atom"
 config.color_scheme = "Catppuccin Mocha"
