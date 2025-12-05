@@ -2,7 +2,7 @@
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
-set termguicolors
+" set termguicolors
 
 call plug#begin()
   Plug 'tpope/vim-commentary'
