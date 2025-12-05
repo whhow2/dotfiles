@@ -12,7 +12,7 @@ config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
 config.font_size = 14
-config.font = wezterm.font("BitstreamVeraSansMono Nerd Font")
+config.font = wezterm.font("BitstromWera Nerd Font")
 -- dark colorscheme
 -- config.color_scheme = "Atom"
 config.color_scheme = "Catppuccin Mocha"
