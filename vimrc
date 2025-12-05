@@ -5,10 +5,6 @@ let mapleader=" "
 set termguicolors
 
 call plug#begin()
-  " Plug 'bluz71/vim-mistfly-statusline'
-  " Plug 'cormacrelf/vim-colors-github'
-  " Plug 'ghifarit53/tokyonight-vim'
-  " Plug 'rose-pine/vim'
   Plug 'tpope/vim-commentary'
   Plug 'dense-analysis/ale'
   Plug 'prabirshrestha/vim-lsp'
@@ -25,7 +21,6 @@ call plug#begin()
   Plug 'puremourning/vimspector'
   Plug 'airblade/vim-gitgutter'
   Plug 'mhinz/vim-startify'
-  " Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 set background=dark

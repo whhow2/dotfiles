@@ -17,7 +17,7 @@ config.font = wezterm.font("BitstromWera Nerd Font")
 -- config.color_scheme = "Atom"
 config.color_scheme = "Catppuccin Mocha"
 
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.90
 local act = wezterm.action
 
 -- 36 is the default, but you can choose a different size.
