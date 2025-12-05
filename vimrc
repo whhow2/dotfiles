@@ -2,7 +2,7 @@
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
-" set termguicolors
+set termguicolors
 
 call plug#begin()
   Plug 'tpope/vim-commentary'
@@ -68,7 +68,6 @@ set backspace=indent,eol,start
 set nowrap
 
 """ CURSOR AND NUMBER SETTINGS """
-highlight Cursor ctermfg=NONE ctermbg=NONE gui=reverse
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
 set cursorline

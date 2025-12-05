@@ -6,35 +6,35 @@ local mux = wezterm.mux
 local is_windows = wezterm.target_triple:find("windows") ~= nil-- This will hold the configuration.
 local config = wezterm.config_builder()
 
-wezterm.on('gui-startup', function(cmd)
-  local args = {}
-  if cmd then
-    args = cmd.args
-  end
+-- wezterm.on('gui-startup', function(cmd)
+--   local args = {}
+--   if cmd then
+--     args = cmd.args
+--   end
 
   -- set workspace 1
-  local tab, pane, window = mux.spawn_window {
-    workspace = 'main',
-    args = args,
-  }
+  -- local tab, pane, window = mux.spawn_window {
+  --   workspace = 'main',
+  --   args = args,
+  -- }
 
-  local tab, pane, window = mux.spawn_window {
-    workspace = 'dev',
-    args = args,
-  }
+  -- local tab, pane, window = mux.spawn_window {
+  --   workspace = 'dev',
+  --   args = args,
+  -- }
 
-  local tab, pane, window = mux.spawn_window {
-    workspace = 'tools',
-    args = args,
-  }
+  -- local tab, pane, window = mux.spawn_window {
+  --   workspace = 'tools',
+  --   args = args,
+  -- }
 
-  local tab, pane, window = mux.spawn_window {
-    workspace = 'AI',
-    args = args,
-  }
+  -- local tab, pane, window = mux.spawn_window {
+  --   workspace = 'AI',
+  --   args = args,
+  -- }
 
-  mux.set_active_workspace 'main'
-end)
+  -- mux.set_active_workspace 'main'
+-- end)
 
 -- This is where you actually apply your config choices.
 
@@ -46,6 +46,7 @@ config.initial_rows = 28
 config.font_size = 14
 if is_windows then
   config.font = wezterm.font("BitstromWera Nerd Font")
+  config.default_prog = { 'C:\\Program Files\\Git\\bin\\bash.exe', '--login', '-i' }
 else
   config.font = wezterm.font("BitstreamVeraSansMono Nerd Font Mono")
 end
@@ -54,7 +55,7 @@ end
 -- config.color_scheme = "Atom"
 config.color_scheme = "Catppuccin Mocha"
 
--- config.window_background_opacity = 0.90
+config.window_background_opacity = 0.93
 local act = wezterm.action
 
 -- 36 is the default, but you can choose a different size.
