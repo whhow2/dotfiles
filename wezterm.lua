@@ -55,7 +55,7 @@ end
 -- config.color_scheme = "Atom"
 config.color_scheme = "Catppuccin Mocha"
 
-config.window_background_opacity = 0.93
+-- config.window_background_opacity = 0.93
 local act = wezterm.action
 
 -- 36 is the default, but you can choose a different size.
