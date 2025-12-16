@@ -52,14 +52,16 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
+
+filetype indent on
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set autoindent
-" set smartindent
-set cindent
-set cinkeys-=0#
-set indentkeys-=0#
+set smartindent
+" set cindent
+" set cinkeys-=0#
+" set indentkeys-=0#
 set smarttab
 set expandtab
 set backspace=indent,eol,start
@@ -328,3 +330,13 @@ nmap <Leader>dj <Plug>VimspectorStepOver
 
  """ INDENTLINE """
  let g:indentLine_enabled = 0
+
+ """ highlight groups for bold """
+" if g:colors_name == 'quiet'
+"   hi Statement cterm=bold
+"   hi Keyword cterm=bold
+"   hi Type cterm=bold
+"   hi Function cterm=bold
+"   hi Constant cterm=bold
+"   hi Special cterm=bold
+" endif
