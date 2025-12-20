@@ -53,9 +53,10 @@ end
 
 -- dark colorscheme
 -- config.color_scheme = "Atom"
-config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Argonaut (Gogh)"
 
--- config.window_background_opacity = 0.93
+config.window_background_opacity = 0.85
 local act = wezterm.action
 
 -- 36 is the default, but you can choose a different size.
@@ -83,7 +84,7 @@ config.keys = {
 	},
 }
 
-config.leader = { key = "Space", mods = 'CTRL', timeout_millliseconds = 1000 }
+config.leader = { key = "a", mods = 'CTRL', timeout_millliseconds = 1000 }
 config.keys = {
   -- splitting
   {

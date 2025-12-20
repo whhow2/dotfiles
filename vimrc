@@ -27,7 +27,7 @@ call plug#begin()
 call plug#end()
 
 set background=dark
-colorscheme lunaperche
+colorscheme quiet
 
 """ FZF """
 set runtimepath^=~/.fzf
@@ -135,7 +135,7 @@ imap ¬ <Right>
 
 """ EASY ESCAPE """
 inoremap jk <ESC>:update<CR>
-inoremap jj <ESC>
+inoremap kj <ESC>
 
 
 """ WINDOW NAVIGATION """
