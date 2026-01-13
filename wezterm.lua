@@ -45,10 +45,10 @@ config.initial_rows = 28
 -- or, changing the font size and color scheme.
 config.font_size = 14
 if is_windows then
-  config.font = wezterm.font("BitstromWera Nerd Font")
+  config.font = wezterm.font("BitstromWera Nerd Font Mono")
   config.default_prog = { 'C:\\Program Files\\Git\\bin\\bash.exe', '--login', '-i' }
 else
-  config.font = wezterm.font("BitstreamVeraSansMono Nerd Font Mono")
+  config.font = wezterm.font("BitstromWera Nerd Font Mono")
 end
 
 -- dark colorscheme
