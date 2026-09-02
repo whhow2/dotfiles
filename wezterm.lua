@@ -2,10 +2,10 @@
 local wezterm = require("wezterm")
 local mux = wezterm.mux
 
-
 local is_windows = wezterm.target_triple:find("windows") ~= nil-- This will hold the configuration.
 local config = wezterm.config_builder()
 
+config.enable_wayland = false
 -- wezterm.on('gui-startup', function(cmd)
 --   local args = {}
 --   if cmd then
